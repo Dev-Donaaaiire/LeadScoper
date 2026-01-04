@@ -391,10 +391,10 @@
                             Actualizaciones de por vida</li>
                     </ul>
 
-                    <button onclick="copyAndOpenDiscord()"
-                        class="w-full bg-brand-green hover:bg-green-400 text-black font-black text-xl py-4 rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] transition transform hover:scale-[1.02] mb-4">
+                    <a href="https://discord.com/users/1373323373190578384" target="_blank" rel="noopener noreferrer"
+                        class="block text-center w-full bg-brand-green hover:bg-green-400 text-black font-black text-xl py-4 rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] transition transform hover:scale-[1.02] mb-4">
                         COMPRAR AHORA
-                    </button>
+                    </a>
                     <p class="text-xs text-center text-gray-500">Pago seguro vía Bizum/PayPal. Garantía de 14 días ANTE
                         ERRORES.</p>
                 </div>
@@ -458,7 +458,7 @@
         <p>&copy; 2026 LeadBot Maps. Todos los derechos reservados.</p>
 
         <div class="mt-6">
-            <a href="#" onclick="event.preventDefault(); copyAndOpenDiscord();"
+            <a href="https://discord.com/users/1373323373190578384" target="_blank" rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 bg-[#5865F2] text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:bg-[#4752c4] hover:scale-105 transition duration-300 group">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -583,16 +583,16 @@
         }
 
         // Logic for Copying and Opening Discord
-        function copyAndOpenDiscord() {
-            navigator.clipboard.writeText('donaaaiire').then(() => {
-                showNotification('¡Usuario Copiado!', 'Ve a Discord, añade a "donaaaiire" y envíanos un mensaje.');
+        // function copyAndOpenDiscord() {
+        //     navigator.clipboard.writeText('donaaaiire').then(() => {
+        //         showNotification('¡Usuario Copiado!', 'Ve a Discord, añade a "donaaaiire" y envíanos un mensaje.');
+        //         setTimeout(() => {
+        //             window.open('https://discord.com/channels/@me', '_blank');
+        //         }, 1500);
+        //     });
+        // }
+        // Replaced by direct links in HTML
 
-                // Wait small delay before opening Discord so user sees the toast
-                setTimeout(() => {
-                    window.open('https://discord.com/channels/@me', '_blank');
-                }, 1500);
-            });
-        }
 
         // Scroll Animation
         document.addEventListener('DOMContentLoaded', () => {
