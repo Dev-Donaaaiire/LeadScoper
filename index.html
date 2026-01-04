@@ -26,6 +26,25 @@
             background-size: 30px 30px;
         }
 
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #22c55e;
+        }
+
         /* Animations */
         .fade-in-up {
             opacity: 0;
@@ -99,8 +118,8 @@
                 <a href="#oferta"
                     class="px-8 py-4 bg-brand-green text-black font-black text-lg rounded shadow-[0_0_20px_rgba(34,197,94,0.6)] hover:shadow-[0_0_30px_rgba(34,197,94,0.8)] hover:-translate-y-1 transition duration-300 w-full sm:w-auto flex flex-col items-center">
                     <span>CONSEGUIR ACCESO BETA</span>
-                    <span class="text-sm font-normal opacity-90">Oferta Flash: 49€ <span
-                            class="line-through opacity-70">49€</span></span>
+                    <span class="text-sm font-normal opacity-90">Oferta Flash: 59€ <span
+                            class="line-through opacity-70">99€</span></span>
                 </a>
                 <div class="flex flex-col text-left">
                     <span class="text-white font-bold text-lg">🔥 Oferta Limitada</span>
@@ -323,7 +342,7 @@
                         <tr>
                             <td class="p-4 text-white font-medium rounded-bl-lg">Costo</td>
                             <td class="p-4 text-gray-500 text-center">Tu tiempo (Valioso)</td>
-                            <td class="p-4 text-brand-green font-bold text-center bg-brand-green/5 rounded-br-lg">29€
+                            <td class="p-4 text-brand-green font-bold text-center bg-brand-green/5 rounded-br-lg">49€
                                 Único</td>
                         </tr>
                     </tbody>
@@ -346,8 +365,8 @@
                     <p class="text-gray-400 mb-6">Paga una vez, úsalo para siempre. Sin suscripciones mensuales.</p>
 
                     <div class="flex justify-center items-end gap-2 mb-8">
-                        <span class="text-gray-500 line-through text-2xl">49€</span>
-                        <span class="text-6xl font-black text-white">29€</span>
+                        <span class="text-gray-500 line-through text-2xl">99€</span>
+                        <span class="text-6xl font-black text-white">49€</span>
                         <span class="text-gray-400 mb-2">/único</span>
                     </div>
 
@@ -364,9 +383,9 @@
                             Actualizaciones de por vida</li>
                     </ul>
 
-                    <button
+                    <button onclick="copyAndOpenDiscord()"
                         class="w-full bg-brand-green hover:bg-green-400 text-black font-black text-xl py-4 rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] transition transform hover:scale-[1.02] mb-4">
-                        DESCARGAR AHORA
+                        COMPRAR AHORA
                     </button>
                     <p class="text-xs text-center text-gray-500">Pago seguro vía Bizum/PayPal. Garantía de 14 días ANTE
                         ERRORES.</p>
@@ -429,62 +448,143 @@
     <!-- Footer -->
     <footer class="bg-brand-black border-t border-gray-800 py-12 text-center text-gray-600 text-sm">
         <p>&copy; 2026 LeadBot Maps. Todos los derechos reservados.</p>
-        <div class="mt-4 space-x-4">
+
+        <div class="mt-6">
+            <a href="#" onclick="event.preventDefault(); copyAndOpenDiscord();"
+                class="inline-flex items-center gap-2 bg-[#5865F2] text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:bg-[#4752c4] hover:scale-105 transition duration-300 group">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037 12.38 12.38 0 0 0-1.04 2.138 18.238 18.238 0 0 0-4.63 0 12.28 12.28 0 0 0-1.048-2.138.077.077 0 0 0-.081-.035 19.833 19.833 0 0 0-4.884 1.514.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.086 2.157 2.419 0 1.334-.956 2.42-2.157 2.42zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.086 2.157 2.419 0 1.334-.946 2.42-2.157 2.42z" />
+                </svg>
+                <span>Soporte Directo: <span
+                        class="underline decoration-white/30 decoration-1 underline-offset-4">donaaaiire</span></span>
+            </a>
+        </div>
+
+        <div class="mt-8 space-x-4 flex justify-center text-xs">
             <button onclick="document.getElementById('terms-modal').classList.remove('hidden')"
-                class="hover:text-white transition">Términos</button>
+                class="hover:text-white transition underline underline-offset-2">Términos y Condiciones</button>
             <button onclick="document.getElementById('privacy-modal').classList.remove('hidden')"
-                class="hover:text-white transition">Privacidad</button>
-            <a href="https://discord.gg/donaaaiire" target="_blank" class="hover:text-brand-green transition font-bold"
-                onclick="event.preventDefault(); navigator.clipboard.writeText('donaaaiire'); alert('Usuario copiado: donaaaiire');">Soporte
-                (Discord: donaaaiire)</a>
+                class="hover:text-white transition underline underline-offset-2">Política de Privacidad</button>
         </div>
     </footer>
 
     <!-- Terms Modal -->
     <div id="terms-modal"
-        class="hidden fixed inset-0 bg-black/90 z-[60] flex items-center justify-center p-4 backdrop-blur-sm">
+        class="hidden fixed inset-0 bg-black/80 z-[60] flex items-center justify-center p-4 backdrop-blur-md transition-all duration-300">
         <div
-            class="bg-brand-dark border border-gray-700 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 relative">
+            class="bg-brand-dark/95 border border-brand-green/20 rounded-2xl max-w-2xl w-full max-h-[80vh] flex flex-col relative shadow-[0_0_40px_rgba(34,197,94,0.1)] overflow-hidden">
             <button onclick="document.getElementById('terms-modal').classList.add('hidden')"
-                class="absolute top-4 right-4 text-gray-400 hover:text-white">✕</button>
-            <h3 class="text-2xl font-bold text-white mb-4">Términos y Condiciones</h3>
-            <div class="text-gray-400 space-y-4 text-left">
-                <p>1. <strong>Uso del Software:</strong> LeadBot Maps es una herramienta de automatización. El usuario
-                    es responsable de su uso ético y legal. No nos hacemos responsables de bloqueos de cuentas por uso
-                    abusivo.</p>
-                <p>2. <strong>Licencia:</strong> La compra otorga una licencia de uso personal e intransferible. No está
-                    permitida la reventa del código fuente.</p>
-                <p>3. <strong>Reembolsos:</strong> Debido a la naturaleza del producto digital (código fuente abierto),
-                    solo se aceptan devoluciones en caso de fallos técnicos demostrables que no podamos resolver en un
-                    plazo de 7 días. La garantía "ANTE ERRORES" cubre fallos de funcionamiento del script, no problemas
-                    externos como cambios en políticas de Google o APIs de terceros.</p>
-                <p>4. <strong>Actualizaciones:</strong> Se garantizan actualizaciones de por vida para corregir errores
-                    y adaptarse a cambios menores en las plataformas.</p>
+                class="absolute top-4 right-4 text-gray-400 hover:text-white bg-gray-800/50 hover:bg-gray-700 rounded-full w-8 h-8 flex items-center justify-center transition z-20">✕</button>
+            <div class="px-8 pt-8 pb-2">
+                <h3 class="text-2xl font-black text-white flex items-center gap-3">
+                    <span class="text-brand-green">📜</span> Términos y Condiciones
+                </h3>
+            </div>
+            <div class="overflow-y-auto custom-scrollbar flex-1">
+                <div class="px-8 pb-8 pt-4 space-y-4 text-left leading-relaxed text-sm md:text-base text-gray-300">
+                    <div class="p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+                        <p class="mb-2"><strong class="text-white">1. Uso del Software</strong></p>
+                        <p class="text-gray-400">LeadBot Maps es una herramienta de automatización. El usuario es
+                            responsable de su uso ético y legal. No nos hacemos responsables de bloqueos de cuentas por
+                            uso abusivo.</p>
+                    </div>
+                    <div class="p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+                        <p class="mb-2"><strong class="text-white">2. Licencia</strong></p>
+                        <p class="text-gray-400">La compra otorga una licencia de uso personal e intransferible. No está
+                            permitida la reventa del código fuente.</p>
+                    </div>
+                    <div class="p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+                        <p class="mb-2"><strong class="text-white">3. Reembolsos</strong></p>
+                        <p class="text-gray-400">Debido a la naturaleza del producto digital (código fuente abierto),
+                            solo se aceptan devoluciones en caso de fallos técnicos demostrables que no podamos resolver
+                            en un plazo de 7 días. La garantía "ANTE ERRORES" cubre fallos de funcionamiento del script,
+                            no problemas externos como cambios en políticas de Google o APIs de terceros.</p>
+                    </div>
+                    <div class="p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+                        <p class="mb-2"><strong class="text-white">4. Actualizaciones</strong></p>
+                        <p class="text-gray-400">Se garantizan actualizaciones de por vida para corregir errores y
+                            adaptarse a cambios menores en las plataformas.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Privacy Modal -->
     <div id="privacy-modal"
-        class="hidden fixed inset-0 bg-black/90 z-[60] flex items-center justify-center p-4 backdrop-blur-sm">
+        class="hidden fixed inset-0 bg-black/80 z-[60] flex items-center justify-center p-4 backdrop-blur-md transition-all duration-300">
         <div
-            class="bg-brand-dark border border-gray-700 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 relative">
+            class="bg-brand-dark/95 border border-brand-green/20 rounded-2xl max-w-2xl w-full max-h-[80vh] flex flex-col relative shadow-[0_0_40px_rgba(34,197,94,0.1)] overflow-hidden">
             <button onclick="document.getElementById('privacy-modal').classList.add('hidden')"
-                class="absolute top-4 right-4 text-gray-400 hover:text-white">✕</button>
-            <h3 class="text-2xl font-bold text-white mb-4">Política de Privacidad</h3>
-            <div class="text-gray-400 space-y-4 text-left">
-                <p>1. <strong>Datos Recopilados:</strong> LeadBot Maps funciona localmente en tu ordenador. Nosotros NO
-                    recopilamos, almacenamos ni tenemos acceso a los datos que extraes (leads) ni a tus credenciales.
-                </p>
-                <p>2. <strong>Pagos:</strong> Los pagos son procesados de forma segura a través de plataformas externas
-                    (PayPal y Bizum). No almacenamos datos bancarios.</p>
-                <p>3. <strong>Comunicaciones:</strong> Solo usaremos tu email para enviarte el producto, la factura y
-                    actualizaciones importantes del software.</p>
+                class="absolute top-4 right-4 text-gray-400 hover:text-white bg-gray-800/50 hover:bg-gray-700 rounded-full w-8 h-8 flex items-center justify-center transition z-20">✕</button>
+            <div class="px-8 pt-8 pb-2">
+                <h3 class="text-2xl font-black text-white flex items-center gap-3">
+                    <span class="text-brand-green">🔒</span> Política de Privacidad
+                </h3>
+            </div>
+            <div class="overflow-y-auto custom-scrollbar flex-1">
+                <div class="px-8 pb-8 pt-4 space-y-4 text-left leading-relaxed text-sm md:text-base text-gray-300">
+                    <div class="p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+                        <p class="mb-2"><strong class="text-white">1. Privacidad de Datos</strong></p>
+                        <p class="text-gray-400">LeadBot Maps funciona 100% localmente en tu ordenador. Nosotros NO
+                            recopilamos, almacenamos ni tenemos acceso a los datos que extraes (leads) ni a tus cookies
+                            de sesión.</p>
+                    </div>
+                    <div class="p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+                        <p class="mb-2"><strong class="text-white">2. Seguridad de Pagos</strong></p>
+                        <p class="text-gray-400">Los pagos son procesados de forma encriptada a través de plataformas
+                            externas seguras (PayPal y Bizum). No almacenamos datos bancarios en nuestros servidores.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Custom Notification Toast -->
+    <div id="notification-toast"
+        class="fixed bottom-5 right-5 transform translate-y-20 opacity-0 transition-all duration-500 z-[100] bg-gray-900 border border-brand-green/30 rounded-lg p-4 shadow-[0_0_20px_rgba(34,197,94,0.2)] flex items-center gap-4 max-w-sm pointer-events-none">
+        <div class="w-10 h-10 rounded-full bg-brand-green/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-brand-green text-xl">📋</span>
+        </div>
+        <div>
+            <h4 class="text-white font-bold text-sm">Usuario Copiado</h4>
+            <p id="notification-message" class="text-gray-400 text-xs mt-1">Pégalo en Discord para contactar.</p>
+        </div>
+    </div>
+
     <script>
+        // Custom Notification Function
+        function showNotification(title, message) {
+            const toast = document.getElementById('notification-toast');
+            const msgElement = document.getElementById('notification-message');
+            const titleElement = toast.querySelector('h4');
+
+            if (title) titleElement.textContent = title;
+            if (message) msgElement.textContent = message;
+
+            // Show
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+
+            // Hide after 4s
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 4000);
+        }
+
+        // Logic for Copying and Opening Discord
+        function copyAndOpenDiscord() {
+            navigator.clipboard.writeText('donaaaiire').then(() => {
+                showNotification('¡Usuario Copiado!', 'Ve a Discord, añade a "donaaaiire" y envíanos un mensaje.');
+
+                // Wait small delay before opening Discord so user sees the toast
+                setTimeout(() => {
+                    window.open('https://discord.com/channels/@me', '_blank');
+                }, 1500);
+            });
+        }
+
         // Scroll Animation
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
